@@ -1,0 +1,57 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News</title>
+</head>
+<body>
+    <h1>Latest News</h1>
+    <ul>
+        <% news.forEach(item => { %>
+            <li>
+                <h2><%= item.heading %></h2>
+                <img src="<%= item.image %>" alt="News Image">
+                <p><%= item.description %></p>
+                <p>Date: <%= new Date(item.date).toDateString() %></p>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Latest News</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/weather">Weather</a></li>
+            <li><a href="/latest-news">Latest News</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/sports-news">Sports News</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Latest News</h1>
+        <ul>
+            <% news.forEach(item => { %>
+                <li>
+                    <h2><%= item.heading %></h2>
+                    <img src="<%= item.image %>" alt="News Image" style="max-width: 100%;">
+                    <p><%= item.description %></p>
+                    <p>Date: <%= new Date(item.date).toDateString() %></p>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</body>
+</html>

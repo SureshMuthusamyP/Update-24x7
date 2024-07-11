@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/weather">Weather</a></li>
+            <li><a href="/latest-news">Latest News</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
+            <li><a href="/about-us">About Us</a></li>
+            <li><a href="/sports-news">Sports News</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Weather Report</h1>
+        <p>Location: <%= weather.name %></p>
+        <p>Temperature: <%= (weather.main.temp - 273.15).toFixed(2) %>°C</p>
+        <p>Weather: <%= weather.weather[0].description %></p>
+    </div>
+</body>
+</html>
+
